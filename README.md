@@ -97,7 +97,9 @@ The activity pattern was indicative of a user attempting to understand the cloud
 
 ### Source 1
 
-CloudTrail Event History
+<img width="794" height="222" alt="history event1" src="https://github.com/user-attachments/assets/23da2f8f-dc46-44ab-afe0-8d0f4a17d067" />
+<img width="788" height="207" alt="history event" src="https://github.com/user-attachments/assets/3aec64a6-4d27-4791-8769-7d24323bc8a7" />
+<img width="754" height="118" alt="trail" src="https://github.com/user-attachments/assets/bef772ee-ac7a-42a7-8c58-b853a9eb2966" />
 
 ### Source 2
 
@@ -105,7 +107,7 @@ CloudTrail Event JSON Details
 
 ### Source 3
 
-IAM Activity Screenshots
+<img width="722" height="174" alt="IAM" src="https://github.com/user-attachments/assets/98b42e3a-b940-4276-89ce-a62d7fdb0039" />
 
 ### Source 4
 
@@ -113,7 +115,9 @@ CloudTrail Configuration Screenshots
 
 ### Source 5
 
-Access Denied Event Evidence
+<img width="755" height="224" alt="s3 access denied" src="https://github.com/user-attachments/assets/2139e192-1724-404a-b6a0-ec3766b15f20" />
+<img width="922" height="297" alt="att denied to create s3" src="https://github.com/user-attachments/assets/83caeb8e-e73a-4ea9-8e5a-4d3c20d082f4" />
+<img width="752" height="245" alt="decribe trail denied" src="https://github.com/user-attachments/assets/d0d9ac60-4972-4e9f-bb29-7d90314cb841" />
 
 ### Source 6
 
