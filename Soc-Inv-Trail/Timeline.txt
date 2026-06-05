@@ -1,0 +1,26 @@
+Incident Timeline
+Initial Access & Persistent Sign-In Attempts
+11:05:03 — 11:25:26
+The user account Attacker-user logs into the AWS Management Console (ConsoleLogin). There are three logged logins over a 20-minute window (11:05, 11:11, and 11:25), indicating potential session refreshes or multiple concurrent logons.
+
+Initial Reconnaissance Sweep
+11:25:36 — 11:25:38
+Immediately after the final successful login, the attacker performs a rapid, automated discovery sweep across AppRegistry (ListApplications), EC2 regional configurations (DescribeRegions), and Notification Hubs (ListNotificationHubs). They are mapping out where infrastructure is currently deployed.
+
+Deep Discovery via AWS Resource Explorer
+11:26:50 — 11:28:48
+The attacker pivots heavily to AWS Resource Explorer 2. Instead of querying services one by one, they run repeated ListIndexes and Search queries. This allows them to discover all active resources across multiple AWS regions simultaneously. They wrap this up by listing S3 buckets (ListBuckets) at 11:28:11.
+
+Targeting Defensive Controls & Infrastructure Modification
+11:30:03 — 11:31:02
+The attacker begins a massive discovery spike targeting AWS CloudTrail, checking existing trails (ListTrails, DescribeTrails) and digging through log events (LookupEvents).
+
+At 11:31:02, the attacker makes an impactful infrastructure move: they execute CreateBucket to create an S3 bucket named aws-cloudtrail-logs-238480774707-0d220714. This naming convention is often used by attackers attempting to blend in or redirect logging infrastructure to cover their tracks.
+
+Post-Modification Log Verification
+11:31:53
+The attacker immediately loops back to CloudTrail, running multiple DescribeTrails, LookupEvents, and ListEventDataStores API calls. They are highly likely checking to see if their bucket creation altered the logging paths or auditing infrastructure.
+
+Final Reconnaissance Round
+11:32:07 — 11:32:15
+The timeline closes out with a rapid final sweep: querying Resource Explorer (Search, ListIndexes), checking EC2 configurations (DescribeRegions), and performing a final ListBuckets check on S3 at 11:32:15.
